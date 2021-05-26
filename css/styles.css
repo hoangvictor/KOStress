@@ -68,10 +68,6 @@ h1 .subHeader {
   transition: 1s;
 }
 
-.collapse ul {
-  border-bottom: 1px solid white;
-}
-
 /* HERO */
 #hero img {
   filter: brightness(50%);
