@@ -1,0 +1,551 @@
+* {
+  transition: 0.1s;
+}
+
+html, body {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  background-color: white;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+hr {
+  width:50px;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-top: 5px dotted #233e8b;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+  font-size: bold;
+}
+
+h1 .subHeader {
+  font-weight: bold;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.btn-outline-dark {
+  transition: 0.75s;
+}
+
+/* NAVBAR */
+.navbar {
+  font-weight: bold;
+  transition: 1s;
+  opacity: 0.95;
+}
+
+.navbar-brand, .nav-link1, .nav-link2, .nav-link3, .nav-link4 {
+  margin-left: 1rem;
+  font-weight: bold;
+  color: white !important;
+  transition: 1s;
+}
+
+.navbar-brand img {
+  position: relative;
+  bottom: 5px;
+  transition: 1s;
+}
+
+.collapse ul {
+  border-bottom: 1px solid white;
+}
+
+/* HERO */
+#hero img {
+  filter: brightness(50%);
+}
+
+/* SLIDE */
+.carousel-item {
+  transition: transform 1s ease-in;
+}
+
+.carousel-indicators {
+  margin-bottom: 3%;
+}
+
+.carousel-caption {
+  margin-bottom: 3%;
+}
+
+/* PROBLEM */
+#problem h1 {
+  margin-top: 5rem;
+  color: #233e8b;
+}
+
+#problem p {
+  color: black;
+}
+
+#problem .imgDiv {
+  margin: auto;
+  width: 80%;
+  height: auto;
+  background-image: url("../images/sleep2.jpg");
+  background-size: cover;
+  padding: 10%;
+  margin-bottom: 5rem;
+}
+
+#problem .play-btn {
+  width: 75px;
+  height: 75px;
+  background: radial-gradient( #233e8b 60%, rgba(255, 255, 255, 1) 62%);
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: 100px auto;
+  box-shadow: 0px 0px 25px 3px #233e8b;
+}
+
+/* triangle */
+.play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  transform-origin: center center;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid #fff;
+  z-index: 100;
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* pulse wave */
+.play-btn:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, .75);
+  top: -30%;
+  left: -30%;
+  background: rgba(198, 16, 0, 0);
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+
+  }
+}
+
+/* OUR AIM */
+#ourAim {
+  padding: 5rem 0 5rem;
+  background-color: white;
+}
+
+#ourAim img {
+  border: 3px solid #233e8b;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+#ourAim img:hover {
+  transition: 0.6s ease;
+  box-shadow: 8px 8px 3px grey;
+  font-weight: bold;
+}
+
+#ourAim h1 {
+  color: #233e8b;
+}
+
+#ourAim p, #ourAim h2 {
+  color: black;
+}
+
+/* HOW WE CAN HELP */
+#howWeCanHelp {
+  background-image: url("../images/sleep1.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 0 5rem 0;
+}
+
+#howWeCanHelp img {
+  height: 75%;
+  width: 75%;
+}
+
+#howWeCanHelp h1 {
+  margin-bottom: 2rem;
+}
+
+#howWeCanHelp p, #howWeCanHelp h2, #howWeCanHelp h1 {
+  text-align: left;
+}
+
+/* SOLUTIONS */
+#ourSolution {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0 0 0;
+  color: black;
+}
+
+#ourSolution .row {
+  margin-bottom: 3rem;
+}
+
+#ourSolution .left {
+  padding: 8% 1% 1rem 1%;
+}
+
+/* FEATURES */
+#features {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+  color: black;
+}
+
+#features .btn-outline-dark {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 13px;
+}
+
+#features span {
+  margin-left: 3px;
+}
+
+#features h1 {
+  margin-bottom: 5rem;
+}
+
+/* SCIENCE BEHIND IT */
+#scienceBehindIt h1 {
+  padding-top: 5rem;
+  color: #233e8b;
+}
+
+#scienceBehindIt p, #scienceBehindIt li{
+  color: black;
+}
+
+#scienceBehindIt li {
+  list-style-type: none;
+  text-align: left;
+  font-size: 125%;
+  margin-bottom: 1rem;
+}
+
+#scienceBehindIt .row {
+  padding: 5rem 0 5rem;
+}
+
+#scienceBehindIt video {
+   width: 85%;
+   margin: 0;
+   height: 85%;
+}
+
+/* CONTACT US */
+#message {
+  margin: 5rem 0 5rem 0;
+}
+#message form {
+  color: black;
+  margin-bottom: 5rem;
+}
+
+#message h1 {
+  color: #233e8b;
+}
+
+.input-group-text {
+  background-color: white;
+}
+
+/* FOOTER */
+footer {
+  background-color: #233e8b;
+  padding: 5em 0;
+}
+
+.footer-02 .footer-heading {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-02 .footer-heading .logo {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-02 a {
+  color: #bba387;
+}
+
+.footer-02 p {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-02 .copyright {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+.footer-02 .list-unstyled li a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-02 .list-unstyled li a:hover {
+  color: #fff;
+}
+
+.footer-02 .list-unstyled a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-02 .list-unstyled a:hover {
+  color: #fff;
+}
+
+.footer-02 .subscribe {
+  margin-top: -10%;
+}
+
+.footer-02 .subscribe-form {
+  border-radius: 40px;
+  background: #fff;
+  padding: 3px;
+  -webkit-box-shadow: 0px -12px 21px -15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px -12px 21px -15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -12px 21px -15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-02 .subscribe-form .form-group {
+  position: relative;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.footer-02 .subscribe-form .form-group input {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: rgba(0, 0, 0, 0.3) !important;
+  font-size: 16px;
+  height: 56px;
+  border-radius: 0;
+}
+
+.footer-02 .subscribe-form .form-group input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-02 .subscribe-form .form-group input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-02 .subscribe-form .form-group input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-02 .subscribe-form .form-group input:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.footer-02 .subscribe-form .form-group input:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.footer-02 .subscribe-form .form-group .submit {
+  color: #fff !important;
+  display: block;
+  width: 150px;
+  height: 56px;
+  font-size: 14px;
+  background: #233e8b !important;
+  border: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.footer-02 .subscribe-form .form-group .submit:hover, .footer-02 .subscribe-form .form-group .submit:focus {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.footer-02 .border-left {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+@media (max-width: 1199.98px) {
+  .footer-02 .border-left {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 85%;
+    height: auto;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  #hero img {
+    filter: brightness(35%);
+  }
+
+  .carousel-caption {
+    margin-bottom: 0;
+  }
+
+  #ourSolution .left {
+    padding: 1rem 10% 1rem 10%;
+  }
+
+  #scienceBehindIt li {
+    font-size: 14px;
+  }
+}
+
+
+/* EFFECTS */
+html {
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1.5s; /* Firefox < 16 */
+        -ms-animation: fadein 1.5s; /* Internet Explorer */
+         -o-animation: fadein 1.5s; /* Opera < 12.1 */
+            animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#howWeCanHelp img {
+  animation-name: upDownLogoAnimation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes upDownLogoAnimation {
+  from {bottom: -25px;}
+  to {bottom: 25px;}
+}
+
+h1, h2, p, ul, li, button, hr, a, #ourAim img, video, #problem img, #message form, footer form {
+  animation-name: h1Animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+@keyframes h1Animation {
+  from {left: -20px;}
+  to {left: 0px;}
+}
